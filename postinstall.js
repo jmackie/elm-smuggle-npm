@@ -1,8 +1,10 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
 const https = require('follow-redirects').https;
 const tar = require('tar');
-const fs = require('fs');
+
 const version = require('./package.json').version;
 
 const platform =
@@ -37,7 +39,10 @@ https
                     // of `package.json` we always give the executable an `.exe`
                     // extension because unix doesn't actually care.
                     if (!windows) {
-                        mv(`${binDir}/${exeName}`, `${binDir}/${exeName}.exe`);
+                        mv(
+                            path.resolve(binDir, exeName),
+                            path.resolve(binDir, exeName + '.exe')
+                        );
                     }
                 })
         );

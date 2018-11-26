@@ -10,9 +10,9 @@
         "url": "https://github.com/jmackie/elm-smuggle-npm.git"
     },
     "keywords": ["elm"],
-    "files": ["preinstall.js", "prepublish.js", "bin"],
+    "files": ["./postinstall.js", "./bin/", "./bin/elm-smuggle.exe"],
     "scripts": {
-        "preinstall": "node ./preinstall.js"
+        "postinstall": "node ./postinstall.js"
     },
     "bin": {
         "elm-smuggle": "./bin/elm-smuggle.exe"
