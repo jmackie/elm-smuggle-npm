@@ -1,6 +1,6 @@
 {
     "name": "elm-smuggle",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Wrapper for elm-smuggle",
     "author": "Jordan Mackie",
     "license": "MIT",

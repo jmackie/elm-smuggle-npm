@@ -5,7 +5,7 @@ const path = require('path');
 const https = require('follow-redirects').https;
 const tar = require('tar');
 
-const version = require('./package.json').version;
+const version = '0.3.0'; //require('./package.json').version;
 
 const platform =
     { win32: 'win64', darwin: 'macos' }[process.platform] || 'linux64';
