@@ -1,6 +1,6 @@
 {
     "name": "elm-smuggle",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Wrapper for elm-smuggle",
     "author": "Jordan Mackie",
     "license": "MIT",
@@ -10,7 +10,6 @@
         "url": "https://github.com/jmackie/elm-smuggle-npm.git"
     },
     "keywords": ["elm"],
-    "files": ["./postinstall.js", "./bin/", "./bin/elm-smuggle.exe"],
     "scripts": {
         "postinstall": "node ./postinstall.js"
     },
