@@ -1,7 +1,7 @@
 {
     "name": "elm-smuggle",
-    "version": "0.4.0",
-    "description": "Wrapper for elm-smuggle",
+    "version": "0.5.0",
+    "description": "Install the elm-smuggle binary",
     "author": "Jordan Mackie",
     "license": "MIT",
     "homepage": "https://github.com/jmackie/elm-smuggle",
@@ -10,14 +10,19 @@
         "url": "https://github.com/jmackie/elm-smuggle-npm.git"
     },
     "keywords": ["elm"],
+    "preferGlobal": true,
+    "main": "index.js",
     "scripts": {
-        "postinstall": "node ./postinstall.js"
+        "install": "binwrap-install",
+        "prepare": "binwrap-prepare",
+        "test": "binwrap-test",
+        "prepublish": "npm test"
     },
+    "files": ["index.js", "bin"],
     "bin": {
-        "elm-smuggle": "./bin/elm-smuggle.exe"
+        "elm-smuggle": "bin/elm-smuggle"
     },
     "dependencies": {
-        "follow-redirects": "^1.5.10",
-        "tar": "^4.4.8"
+        "binwrap": "^0.2.0"
     }
 }
